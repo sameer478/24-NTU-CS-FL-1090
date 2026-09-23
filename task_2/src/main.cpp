@@ -1,6 +1,6 @@
 #include <Arduino.h>
-// Muhammad Ayub
-// 24 NTU CS F1 1059
+// Sameer Abbas 
+// 24 NTU CS F1 1090
 
 #define LED_PIN 2
 
