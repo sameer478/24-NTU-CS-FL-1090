@@ -5,8 +5,8 @@
 // Assignment
 // Timer Interrupt + Button Debounce + I2C OLED
 // Embedded IoT System Fall-2026
-// Name: M Ayub Mughal
-// Reg#: 24-NTU-CS-FL-1059
+// Name: Sameer Abbas
+// Reg#: 24-NTU-CS-FL-1090
 
 #define LED 4
 #define BUTTON_PIN 5
