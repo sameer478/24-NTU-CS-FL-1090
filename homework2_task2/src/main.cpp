@@ -1,6 +1,5 @@
 // Task 2 - Dual LED PWM with OLED
-// Sameer Abbas 1090
-// Updated for ESP32 Arduino core 3.x
+// Updated for ESP32 Arduino Core 3.x
 
 #include <Arduino.h>
 #include <Wire.h>
@@ -75,7 +74,7 @@ void updateOLED() {
     display.display();
 }
 
-// Update LED brightness (core 3.x: ledcWrite takes the pin)
+// Update LED brightness (Core 3.x uses pin instead of channel)
 void updateFade(
     int &duty,
     int &direction,
@@ -102,7 +101,7 @@ void setup() {
     // Initialize I2C: SDA = GPIO 21, SCL = GPIO 22
     Wire.begin(21, 22);
 
-    // Configure LED1 and LED2 PWM (core 3.x: pin, frequency, resolution)
+    // Core 3.x PWM Initialization: ledcAttach(pin, freq, resolution)
     ledcAttach(LED1_PIN, LED1_FREQ, PWM_RESOLUTION);
     ledcAttach(LED2_PIN, LED2_FREQ, PWM_RESOLUTION);
 
@@ -129,6 +128,7 @@ void setup() {
     Serial.println("LED2 Frequency: 5000 Hz");
     Serial.println("PWM Resolution: 8-bit");
 }
+
 void loop() {
     unsigned long now = millis();
 
